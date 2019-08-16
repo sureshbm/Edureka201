@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<roles>
+  <role>
+    <RoleName>rol2</RoleName>
+    <Description>hfhfghfghfgh</Description>
+    <Permission>RW</Permission>
+  </role>
+  <role>
+    <RoleName>role3</RoleName>
+    <Description>zxcsdfsdf sdfsd</Description>
+    <Permission>WU</Permission>
+  </role>
+  <role>
+    <RoleName>role10</RoleName>
+    <Description>role10</Description>
+    <Permission>RWUD</Permission>
+  </role>
+</roles>

@@ -1,0 +1,42 @@
+﻿<div ng-controller="UserRoleController" class="top">
+    <div>
+        <h2> User and Role</h2>
+    </div>
+
+    <div>
+
+
+        <br />
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Row</th>
+
+                    <th ng-click="sortData('UserName')">User <div ng-class="getSortClass('UserName')"></div></th>
+                    <th>Role</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in userRole | orderBy:sortColumn:reverseSort">
+                    <td>{{$index +1}}</td>
+                    <td>{{item.UserName}}</td>
+                    <td>
+                        <select id="userrole{{$index}}" ng-model="item.SelectedRole">
+                            <option ng-repeat="x in item.Role" value="{{x.RoleName}}">{{x.RoleName}}</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="col-lg-12 col-sm-12 form-group text-right">
+            <button class="btn btn-primary" ng-click="saveData()"> Save </button>
+        </div>
+
+    </div>
+</div>
+
+
+ 

@@ -1,0 +1,43 @@
+﻿<div ng-controller="PermissionController" class="top">
+    <div>
+        <h2> Permissions</h2>
+    </div>
+     
+    <div>
+         
+
+        <br />
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Row</th>
+                    <th>Role</th>
+                    <th>Permission </th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in rolePermissions">
+                    <td>{{$index +1}}</td>
+                    <td>{{item.RoleName}}</td>
+                    <td>
+                        <lable><input ng-model="rolePermissions[$index].R" type="checkbox" ng-checked="{{(item.Permission).indexOf('R') > -1 }}" /> Read </lable>
+                        <lable><input ng-model="rolePermissions[$index].W" type="checkbox" ng-checked="{{(item.Permission).indexOf('W') > -1 }}" /> Write </lable>
+                        <lable><input ng-model="rolePermissions[$index].U" type="checkbox" ng-checked="{{(item.Permission).indexOf('U') > -1 }}" /> Update </lable>
+                        <lable><input ng-model="rolePermissions[$index].D" type="checkbox" ng-checked="{{(item.Permission).indexOf('D') > -1 }}" /> Delete </lable>
+                        <!--<input type="text" ng-model="rolePermissions[$index].Permission" />-->
+                        
+                    </td>
+                    <td></td>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="col-lg-12 col-sm-12 form-group text-right">
+            <button class="btn btn-primary" ng-click="saveData()"> Save </button>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,58 @@
+﻿<div ng-controller="UserController" class="top">
+    <div>
+        <h2> User List</h2>
+    </div>
+    <div class="col-lg-12 col-sm-12 text-right" style="margin-bottom:10px">
+        <button class="btn btn-primary" ng-click="showHideUserDiv()"> {{AddNew}} </button>
+    </div>
+
+    <div class="row col-lg-8  col-sm-8 container {{userDivStatusclass}}" id="userDiv">
+
+        <div class="col-lg-12 col-sm-12 form-group">
+            <div class="col-sm-6 col-lg-6 "><label for="userName" class="control-label">User Name</label>  </div>
+            <div class="col-sm-6 col-lg-6 "> <input ng-model="userName" id="userName" name="userName" type="text" maxlength="25" class="form-control" /> </div>
+
+        </div>
+        <div class="col-lg-12 col-sm-12 form-group">
+            <div class="col-sm-6 col-lg-6 "><label for="emailId" class="control-label">Email Id</label>  </div>
+            <div class="col-sm-6 col-lg-6 "> <input ng-model="emailId" id="emailId" name="emailId" type="text" maxlength="25" class="form-control" /> </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 form-group text-right">
+
+        </div>
+        <div class="col-lg-6 col-sm-6 form-group text-right">
+            <button class="btn btn-primary" ng-click="writeData();readData()"> {{btnSave}} </button>
+        </div>
+
+    </div>
+
+    <!--User list-->
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Row</th>
+                    <th ng-click="sortData('userName')">User Name <div ng-class="getSortClass('userName')"></div></th>
+                    <th ng-click="sortData('emailId')">Email ID <div ng-class="getSortClass('emailId')"></div></th>                     
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="user in users | orderBy:sortColumn:reverseSort">
+                    <th>{{$index +1}}</th>
+                    <th>{{user.UserName}}</th>
+                    <th>{{user.EmaliId}}</th>
+                    <th> <button class="btn btn-primary" ng-click="showUserDiv();editUser(user.UserName,user.EmaliId);readData()"> Edit </button></th>
+                    <th> <button class="btn btn-danger" ng-click="deleteUser(user.UserName);readData()"> Delete </button></th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+       
+         
+       
+    </div>
+</div>

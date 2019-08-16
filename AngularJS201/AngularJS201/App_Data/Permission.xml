@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+  <role>
+    <name>role1</name>
+    <permission>RWUD</permission>
+  </role>
+  <role>
+    <name>role2</name>
+    <permission>RD</permission>
+  </role>
+</permissions>

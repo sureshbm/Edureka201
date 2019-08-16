@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<users>
+  <user>
+    <UserName>ramesh</UserName>
+    <EmailId>reamesh@gmail.com</EmailId>
+    <Role>role10</Role>
+  </user>
+  <user>
+    <UserName>sureshbm</UserName>
+    <EmailId>sureshbm@gmail.com</EmailId>
+    <Role>role10</Role>
+  </user>
+  <user>
+    <UserName>xcv</UserName>
+    <EmailId>xcvxcv</EmailId>
+    <Role>role3</Role>
+  </user>
+  <user>
+    <UserName>xcvxc</UserName>
+    <EmailId>vxcvxcv</EmailId>
+    <Role>role3</Role>
+  </user>
+  <user>
+    <UserName>sds</UserName>
+    <EmailId>fwsdfsdf</EmailId>
+    <Role>role3</Role>
+  </user>
+</users>
